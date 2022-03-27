@@ -1,0 +1,18 @@
+.shape-top-right {
+  position: absolute;
+  z-index: -100;
+  right: -45px;
+  top: -150px;
+  transform: rotate(10deg);
+}
+
+.shape-top-left {
+  position: absolute;
+  z-index: -100;
+  left: -400px;
+  bottom: -200px;
+}
+
+.col-divider {
+  border-right: 1px solid $grey-5;
+}

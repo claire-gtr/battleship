@@ -1,0 +1,21 @@
+.btn {
+  border-radius: $border-radius;
+}
+.btn-large {
+  padding: 13px;
+  width: 100%;
+}
+
+.btn-blue {
+  background-color: $blue-0;
+  h3 {
+    color: $grey-6;
+  }
+}
+
+.btn-grey {
+  background-color: $grey-2;
+  h3 {
+    color: $grey-6;
+  }
+}

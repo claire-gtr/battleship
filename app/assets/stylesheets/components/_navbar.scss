@@ -1,12 +1,17 @@
-.navbar-lewagon {
+.navbar-bearer {
   justify-content: space-between;
-  background: white;
+  padding: 0 60px;
+  height: 96px;
+  background: radial-gradient(100% 100% at 50% 0%, #FFFFFF 0%, #F6F6F6 100%);
+  p {
+    color: $grey-1;
+  }
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-bearer .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-bearer .navbar-brand img {
+  height: 45px;
 }

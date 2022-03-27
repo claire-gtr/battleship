@@ -1,0 +1,22 @@
+.target-circle {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+}
+
+.board-grid-current-user {
+  .target-circle {
+    background-color: $blue-1;
+  }
+}
+
+.board-grid-opponent {
+  .target-circle {
+    background-color: $grey-3;
+  }
+}
+
+.target-circle-hit {
+  background-color: $coral-0 !important;
+}
+

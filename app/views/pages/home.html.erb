@@ -1,2 +1,443 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+  <div class="row boards-container">
+    <div class="col col-divider px-5">
+
+      <div class="btn btn-large btn-blue">
+        <h3 class="mb-0">Your Fleet</h3>
+      </div>
+
+      <div class="board-grid board-grid-current-user">
+        <div class="d-flex">
+          <%= render(BoxComponent.new(classname: "box box-empty")) %>
+          <%= render(BoxComponent.new(classname: "box box-letter")) do %>
+            <h2>A</h2>
+          <% end %>
+          <%= render(BoxComponent.new(classname: "box box-letter")) do %>
+            <h2>B</h2>
+          <% end %>
+          <%= render(BoxComponent.new(classname: "box box-letter")) do %>
+            <h2>C</h2>
+          <% end %>
+          <%= render(BoxComponent.new(classname: "box box-letter")) do %>
+            <h2>D</h2>
+          <% end %>
+          <%= render(BoxComponent.new(classname: "box box-letter")) do %>
+            <h2>E</h2>
+          <% end %>
+          <%= render(BoxComponent.new(classname: "box box-letter")) do %>
+            <h2>F</h2>
+          <% end %>
+          <%= render(BoxComponent.new(classname: "box box-letter")) do %>
+            <h2>G</h2>
+          <% end %>
+          <%= render(BoxComponent.new(classname: "box box-letter")) do %>
+            <h2>H</h2>
+          <% end %>
+          <%= render(BoxComponent.new(classname: "box box-letter")) do %>
+            <h2>I</h2>
+          <% end %>
+          <%= render(BoxComponent.new(classname: "box box-letter")) do %>
+            <h2>J</h2>
+          <% end %>
+        </div>
+        <div class="d-flex">
+          <div class="box box-number"><h2>1</h2></div>
+          <div class="box">
+          <div class="target-circle"></div>
+          </div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="d-flex">
+          <div class="box box-number"><h2>2</h2></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="d-flex">
+          <div class="box box-number"><h2>3</h2></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="d-flex">
+          <div class="box box-number"><h2>4</h2></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="d-flex">
+          <div class="box box-number"><h2>5</h2></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="d-flex">
+          <div class="box box-number"><h2>6</h2></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="d-flex">
+          <div class="box box-number"><h2>7</h2></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="d-flex">
+          <div class="box box-number"><h2>8</h2></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="d-flex">
+          <div class="box box-number"><h2>9</h2></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="d-flex">
+          <div class="box box-number"><h2>10</h2></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+      </div>
+
+      <div class="shipyard d-flex">
+        <h3 class="m-0">SHIPYARD</h3>
+        <div class="shipyard-layout">
+          <div class="d-flex">
+            <div class="ship battleship">
+              <div class='ship-layout ship-back' style="background-image:url('<%= image_path "ships/back.png" %>')">
+                <div class="ship-circle">
+                </div>
+              </div>
+              <div class='ship-layout ship-middle' style="background-image:url('<%= image_path "ships/middle.png" %>')">
+                <div class="ship-circle">
+                </div>
+              </div>
+              <div class='ship-layout ship-middle' style="background-image:url('<%= image_path "ships/middle.png" %>')">
+                <div class="ship-circle">
+                </div>
+              </div>
+              <div class='ship-layout' style="background-image:url('<%= image_path "ships/front.png" %>')">
+                <div class="ship-circle">
+                </div>
+              </div>
+            </div>
+
+            <div class="ship submarine">
+              <div class='ship-layout ship-back' style="background-image:url('<%= image_path "ships/back.png" %>')">
+                <div class="ship-circle">
+                </div>
+              </div>
+              <div class='ship-layout ship-middle' style="background-image:url('<%= image_path "ships/middle.png" %>')">
+                <div class="ship-circle">
+                </div>
+              </div>
+              <div class='ship-layout' style="background-image:url('<%= image_path "ships/front-submarine.png" %>')">
+                <div class="ship-circle">
+                </div>
+              </div>
+            </div>
+
+            <div class="ship cruiser">
+              <div class='ship-layout ship-back' style="background-image:url('<%= image_path "ships/back.png" %>')">
+                <div class="ship-circle">
+                </div>
+              </div>
+              <div class='ship-layout' style="background-image:url('<%= image_path "ships/front.png" %>')">
+                <div class="ship-circle">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex">
+            <div class="ship aircraft-carrier">
+              <div class='ship-layout' style="background-image:url('<%= image_path "ships/back-aircraft.png" %>')">
+                <div class="ship-circle">
+                </div>
+              </div>
+              <div class='ship-layout ship-middle' style="background-image:url('<%= image_path "ships/middle.png" %>')">
+                <div class="ship-circle">
+                </div>
+              </div>
+              <div class='ship-layout ship-middle' style="background-image:url('<%= image_path "ships/middle.png" %>')">
+                <div class="ship-circle">
+                </div>
+              </div>
+              <div class='ship-layout ship-middle' style="background-image:url('<%= image_path "ships/middle.png" %>')">
+                <div class="ship-circle">
+                </div>
+              </div>
+              <div class='ship-layout' style="background-image:url('<%= image_path "ships/front-aircraft.png" %>')">
+                <div class="ship-circle">
+                </div>
+              </div>
+            </div>
+
+            <div class="ship destroyer">
+              <div class='ship-layout ship-back' style="background-image:url('<%= image_path "ships/back.png" %>')">
+                <div class="ship-circle">
+                </div>
+              </div>
+              <div class='ship-layout ship-middle' style="background-image:url('<%= image_path "ships/middle.png" %>')">
+                <div class="ship-circle">
+                </div>
+              </div>
+              <div class='ship-layout' style="background-image:url('<%= image_path "ships/front.png" %>')">
+                <div class="ship-circle">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="col px-5">
+      <div class="btn btn-large btn-grey">
+        <h3 class="mb-0">Opponent</h3>
+      </div>
+
+      <div class="board-grid board-grid-opponent">
+        <div class="d-flex">
+          <div class="box box-empty"></div>
+          <div class="box box-letter"><h2>A</h2></div>
+          <div class="box box-letter"><h2>B</h2></div>
+          <div class="box box-letter"><h2>C</h2></div>
+          <div class="box box-letter"><h2>D</h2></div>
+          <div class="box box-letter"><h2>E</h2></div>
+          <div class="box box-letter"><h2>F</h2></div>
+          <div class="box box-letter"><h2>G</h2></div>
+          <div class="box box-letter"><h2>H</h2></div>
+          <div class="box box-letter"><h2>I</h2></div>
+          <div class="box box-letter"><h2>J</h2></div>
+        </div>
+        <div class="d-flex">
+          <div class="box box-number"><h2>1</h2></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box">
+            <div class="target-circle"></div>
+          </div>
+          <div class="box">
+            <div class="target-circle target-circle-hit"></div>
+          </div>
+        </div>
+        <div class="d-flex">
+          <div class="box box-number"><h2>2</h2></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="d-flex">
+          <div class="box box-number"><h2>3</h2></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="d-flex">
+          <div class="box box-number"><h2>4</h2></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="d-flex">
+          <div class="box box-number"><h2>5</h2></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="d-flex">
+          <div class="box box-number"><h2>6</h2></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="d-flex">
+          <div class="box box-number"><h2>7</h2></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="d-flex">
+          <div class="box box-number"><h2>8</h2></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="d-flex">
+          <div class="box box-number"><h2>9</h2></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="d-flex">
+          <div class="box box-number"><h2>10</h2></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+      </div>
+
+      <div class="shipyard d-flex">
+        <h3 class="m-0">GRAVEYARD</h3>
+        <div class="shipyard-layout">
+          <div class="d-flex">
+            <p>Cruiser (2 blocks)</p>
+            <p>Battleship (4 blocks)</p>
+          </div>
+          <div class="d-flex">
+            <p>Submarine (3 blocks)</p>
+            <p>Aircraft Carrier (5 blocks)</p>
+          </div>
+          <div class="d-flex">
+            <p>Destroyer (3 blocks)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
