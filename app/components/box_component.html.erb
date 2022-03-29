@@ -1,1 +1,4 @@
-<div class="<%= @classname %>"><%= content %></div>
+<div class="<%= @classname %>" data-xy="<%= @data_xy %>">
+  <%= content %>
+  <%= render(TargetCircleComponent.new(classname: @target_state)) %>
+</div>

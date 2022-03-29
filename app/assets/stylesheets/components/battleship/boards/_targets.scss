@@ -2,6 +2,9 @@
   height: 16px;
   width: 16px;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .board-grid-current-user {
@@ -18,5 +21,19 @@
 
 .target-circle-hit {
   background-color: $coral-0 !important;
+}
+
+.target-circle-hit-image-fade {
+  animation: fadeOut ease 0.5s;
+  opacity: 0;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
 }
 
