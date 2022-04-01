@@ -1,0 +1,27 @@
+<div class="board-grid <%= @classname %>">
+  <div class="d-flex">
+    <%= render(Boardgrids::BoxComponent.new(classname: "box box-empty", data_xy: "0", target_state: "")) %>
+    <% @letters.each do |letter| %>
+      <%= render(Boardgrids::BoxComponent.new(classname: "box box-empty", data_xy: "#{letter}", target_state: "")) do %>
+        <h2><%= letter %></h2>
+      <% end %>
+    <% end %>
+  </div>
+
+  <% @numbers.each do |number| %>
+    <div class="d-flex">
+      <%= render(Boardgrids::BoxComponent.new(classname: "box box-empty", data_xy: "#{number}", target_state: "")) do %>
+        <h2><%= number %></h2>
+      <% end %>
+      <% @letters.each do |letter| %>
+        <%= render(Boardgrids::BoxComponent.new(classname: "box", data_xy: "#{letter}#{number}",target_state: "")) %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% if action_name == "demo" %>
+    <div class="box" data-xy="TEST" data-controller="hit-animation" data-action="click->hit-animation#executeAnimation">
+      <%= render(Boardgrids::TargetCircleComponent.new(classname: "target-circle")) %>
+    </div>
+  <% end %>
+</div>

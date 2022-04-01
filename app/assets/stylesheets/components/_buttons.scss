@@ -1,3 +1,12 @@
+a {
+  color: $grey-3;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $grey-2;
+}
+
 .btn {
   border-radius: $border-radius;
 }

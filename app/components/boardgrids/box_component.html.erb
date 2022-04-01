@@ -1,0 +1,4 @@
+<div class="<%= @classname %>" data-xy="<%= @data_xy %>">
+  <%= content %>
+  <%= render(Boardgrids::TargetCircleComponent.new(classname: @target_state)) %>
+</div>

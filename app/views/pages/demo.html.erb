@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" data-controller="demo-targets">
   <div class="row boards-container">
     <div class="col col-divider px-5">
 
@@ -10,14 +10,14 @@
         <h3 class="mr-4 my-0">SHIPYARD</h3>
         <div class="shipyard-layout">
           <div class="d-flex pl-4">
-            <%= render(Ships::BattleshipComponent.new(state: "default")) %>
-            <%= render(Ships::SubmarineComponent.new(state: "default")) %>
-            <%= render(Ships::CruiserComponent.new(state: "default")) %>
+            <%= render(Ships::BattleshipComponent.new(state: "silhouette")) %>
+            <%= render(Ships::SubmarineComponent.new(state: "silhouette")) %>
+            <%= render(Ships::CruiserComponent.new(state: "silhouette")) %>
           </div>
 
           <div class="d-flex">
-            <%= render(Ships::AircraftCarrierComponent.new(state: "default")) %>
-            <%= render(Ships::DestroyerComponent.new(state: "default")) %>
+            <%= render(Ships::AircraftCarrierComponent.new(state: "silhouette")) %>
+            <%= render(Ships::DestroyerComponent.new(state: "silhouette")) %>
           </div>
         </div>
       </div>
@@ -32,7 +32,7 @@
         <h3 class="m-0">GRAVEYARD</h3>
         <div class="shipyard-layout">
           <div class="d-flex">
-            <p>Cruiser (2 blocks)</p>
+            <p class="ship-destroyed">Cruiser (2 blocks)</p>
             <p>Battleship (4 blocks)</p>
           </div>
           <div class="d-flex">
@@ -47,7 +47,7 @@
       
     </div>
     <div class="text-center w-100 mt-5">
-      <%= link_to "See demo boardgrid", demo_path %>
+      <%= link_to "See default boardgrid", root_path %>
     </div>
   </div>
 </div>

@@ -1,0 +1,23 @@
+.shipyard {
+  margin-top: 24px;
+  h3 {
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
+    margin-left:0px;
+  }
+}
+
+.shipyard-layout {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  p {
+    margin-bottom: 0px;
+    margin-left: 24px;
+  }
+  p.ship-destroyed {
+    color: $coral-0;
+    text-decoration: line-through;
+  }
+}
+

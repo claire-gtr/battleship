@@ -1,0 +1,79 @@
+.ship {
+  display:flex;
+  margin: 0px 5px;
+  z-index:100;
+  &:hover {
+    .ship-circle.ship-circle-default {
+      height:16px;
+      width:16px;
+      border: 2px solid $grey-1;
+    }
+  }
+}
+
+.ship.hit {
+  .ship-circle {
+    height:16px;
+    width:16px;
+    background-color: $coral-0;
+  }
+  &:hover {
+    .ship-circle.ship-circle-default {
+      border: none;
+    }
+  }
+}
+
+.ship-positionned {
+  position:absolute;
+  left:0;
+  margin:0px;
+}
+
+.ship-positionned-vertical-cruiser {
+  transform: rotate(-90deg);
+  transform-origin: 50% 100%;
+  margin-left: -2px;
+  margin-bottom: -2px;
+}
+
+.ship-positionned-vertical-battleship {
+  transform: rotate(-90deg);
+  transform-origin: 12% 43%;
+  margin-left: -2px;
+  margin-bottom: -2px;
+}
+
+.ship-positionned-vertical-aircraft {
+  transform: rotate(-90deg);
+  transform-origin: 10% 50%;
+  margin-left: -1px;
+}
+
+.ship-layout {
+  background-size: contain;
+  background-repeat: no-repeat;
+  height:28px;
+  width: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ship-back {
+  margin-right: -2px;
+}
+
+.ship-circle {
+  height:12px;
+  width:12px;
+  border-radius: 50%;
+}
+
+.ship-circle-default {
+  background-color: $grey-2;
+}
+
+.ship-circle-silhouette {
+  background-color: $grey-3;
+}
