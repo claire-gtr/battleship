@@ -1,4 +1,18 @@
 <div class="<%= @classname %>" data-xy="<%= @data_xy %>">
   <%= content %>
   <%= render(Boardgrids::TargetCircleComponent.new(classname: @target_state)) %>
+  <% if @ship_position[:"#{@data_xy}"] && @user != "board-grid-opponent" %>
+    <% case @ship_position[:"#{@data_xy}"][:ship]  %>
+    <% when "Destroyer" %>
+      <%= render(Ships::DestroyerComponent.new(state: "default", ship_position: @ship_position[:"#{@data_xy}"][:position])) %>
+    <% when "Aircraft" %>
+      <%= render(Ships::AircraftCarrierComponent.new(state: "default", ship_position: @ship_position[:"#{@data_xy}"][:position])) %>
+    <% when "Battleship" %>
+      <%= render(Ships::BattleshipComponent.new(state: "default", ship_position: @ship_position[:"#{@data_xy}"][:position])) %>
+    <% when "Cruiser" %>
+      <%= render(Ships::CruiserComponent.new(state: "default", ship_position: @ship_position[:"#{@data_xy}"][:position])) %>
+    <% when "Submarine" %>
+      <%= render(Ships::SubmarineComponent.new(state: "default", ship_position: @ship_position[:"#{@data_xy}"][:position])) %>
+    <% end %>
+  <% end %>
 </div>

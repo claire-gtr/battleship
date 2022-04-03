@@ -1,8 +1,8 @@
 <div class="board-grid <%= @classname %>">
   <div class="d-flex">
-    <%= render(Boardgrids::BoxComponent.new(classname: "box box-empty", data_xy: "0", target_state: "")) %>
+    <%= render(Boardgrids::BoxComponent.new(user: @classname, ship_position: @ships_position, classname: "box box-empty", data_xy: "0", target_state: "")) %>
     <% @letters.each do |letter| %>
-      <%= render(Boardgrids::BoxComponent.new(classname: "box box-empty", data_xy: "#{letter}", target_state: "")) do %>
+      <%= render(Boardgrids::BoxComponent.new(user: @classname, ship_position: @ships_position, classname: "box box-empty", data_xy: "#{letter}", target_state: "")) do %>
         <h2><%= letter %></h2>
       <% end %>
     <% end %>
@@ -10,11 +10,15 @@
 
   <% @numbers.each do |number| %>
     <div class="d-flex">
-      <%= render(Boardgrids::BoxComponent.new(classname: "box box-empty", data_xy: "#{number}", target_state: "")) do %>
+      <%= render(Boardgrids::BoxComponent.new(user: @classname, ship_position: @ships_position, classname: "box box-empty", data_xy: "#{number}", target_state: "")) do %>
         <h2><%= number %></h2>
       <% end %>
       <% @letters.each do |letter| %>
-        <%= render(Boardgrids::BoxComponent.new(classname: "box", data_xy: "#{letter}#{number}",target_state: "")) %>
+        <% if @game_state[:"#{@classname}"].nil? %>
+          <%= render(Boardgrids::BoxComponent.new(user: @classname, ship_position: @ships_position, classname: "box", data_xy: "#{letter}#{number}",target_state: "")) %>
+        <% else %>
+          <%= render(Boardgrids::BoxComponent.new(user: @classname, ship_position: @ships_position, classname: "box", data_xy: "#{letter}#{number}", target_state: @game_state[:"#{@classname}"][:"#{letter}#{number}"] )) %>
+        <% end %>
       <% end %>
     </div>
   <% end %>

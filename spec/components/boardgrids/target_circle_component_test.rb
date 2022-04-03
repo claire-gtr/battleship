@@ -1,12 +1,11 @@
 # frozen_string_literal: true
 
-require "test_helper"
+require "rails_helper"
 
-class Boardgrids::TargetCircleComponentTest < ViewComponent::TestCase
-  def test_component_renders_something_useful
-    # assert_equal(
-    #   %(<span>Hello, components!</span>),
-    #   render_inline(TargetCircleComponent.new(message: "Hello, components!")).css("span").to_html
-    # )
+RSpec.describe Boardgrids::TargetCircleComponent, type: :component do
+  it "Renders target circle component with correct classes and text" do
+    render_inline(described_class.new(classname: "target-circle"))
+
+    expect(rendered_component).to have_css ".target-circle"
   end
 end

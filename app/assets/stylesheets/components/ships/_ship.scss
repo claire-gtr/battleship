@@ -1,7 +1,7 @@
 .ship {
   display:flex;
   margin: 0px 5px;
-  z-index:100;
+  z-index:10;
   &:hover {
     .ship-circle.ship-circle-default {
       height:16px;

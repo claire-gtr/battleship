@@ -2,8 +2,9 @@
 
 class Ships::AircraftCarrierComponent < ViewComponent::Base
 
-  def initialize(state:)
+  def initialize(state:, ship_position:)
     @state = state
+    @ship_position = ship_position
   end
 
 end

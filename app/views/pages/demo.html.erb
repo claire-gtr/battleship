@@ -4,20 +4,20 @@
 
       <%= render(Players::PlayerNameComponent.new(classname: "btn-blue").with_content("Your Fleet")) %>
 
-      <%= render(Boardgrids::BoardgridComponent.new(classname: "board-grid-current-user", letters: @letters, numbers: @numbers)) %>
+      <%= render(Boardgrids::BoardgridComponent.new(classname: "board-grid-current-user", letters: @letters, numbers: @numbers, game_state: @game_state, ships_position: @ships_position)) %>
 
       <div class="shipyard d-flex">
         <h3 class="mr-4 my-0">SHIPYARD</h3>
         <div class="shipyard-layout">
           <div class="d-flex pl-4">
-            <%= render(Ships::BattleshipComponent.new(state: "silhouette")) %>
-            <%= render(Ships::SubmarineComponent.new(state: "silhouette")) %>
-            <%= render(Ships::CruiserComponent.new(state: "silhouette")) %>
+            <%= render(Ships::BattleshipComponent.new(state: @state, ship_position: @ship_position)) %>
+            <%= render(Ships::SubmarineComponent.new(state: @state, ship_position: @ship_position)) %>
+            <%= render(Ships::CruiserComponent.new(state: @state, ship_position: @ship_position)) %>
           </div>
 
           <div class="d-flex">
-            <%= render(Ships::AircraftCarrierComponent.new(state: "silhouette")) %>
-            <%= render(Ships::DestroyerComponent.new(state: "silhouette")) %>
+            <%= render(Ships::AircraftCarrierComponent.new(state: @state, ship_position: @ship_position)) %>
+            <%= render(Ships::DestroyerComponent.new(state: @state, ship_position: @ship_position)) %>
           </div>
         </div>
       </div>
@@ -26,7 +26,7 @@
     <div class="col px-5">
       <%= render(Players::PlayerNameComponent.new(classname: "btn-grey").with_content("Opponent")) %>
 
-      <%= render(Boardgrids::BoardgridComponent.new(classname: "board-grid-opponent", letters: @letters, numbers: @numbers)) %>
+      <%= render(Boardgrids::BoardgridComponent.new(classname: "board-grid-opponent", letters: @letters, numbers: @numbers, game_state: @game_state, ships_position: @ships_position)) %>
       
       <div class="shipyard d-flex">
         <h3 class="m-0">GRAVEYARD</h3>

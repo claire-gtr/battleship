@@ -1,12 +1,11 @@
 # frozen_string_literal: true
 
-require "test_helper"
+require "rails_helper"
 
-class Ships::AircraftCarrierComponentTest < ViewComponent::TestCase
-  def test_component_renders_something_useful
-    # assert_equal(
-    #   %(<span>Hello, components!</span>),
-    #   render_inline(Ships::AircraftCarrierComponent.new(message: "Hello, components!")).css("span").to_html
-    # )
+RSpec.describe Ships::AircraftCarrierComponent, type: :component do
+  it "Renders aircraft component with correct " do
+    render_inline(described_class.new(state: "state", ship_position: "" , ship_positionned_vertical: ""))
+
+    expect(rendered_component).to have_css "ship-circle-default"
   end
 end

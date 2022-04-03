@@ -1,12 +1,11 @@
 # frozen_string_literal: true
 
-require "test_helper"
+require "rails_helper"
 
-class Boardgrids::BoxComponentTest < ViewComponent::TestCase
-  def test_component_renders_something_useful
-    # assert_equal(
-    #   %(<span>Hello, components!</span>),
-    #   render_inline(BoxComponent.new(message: "Hello, components!")).css("span").to_html
-    # )
+RSpec.describe Boardgrids::BoxComponent, type: :component do
+  it "Renders box component with correct classes and text" do
+    render_inline(described_class.new(classname: "box box-empty", data_xy: "F6", target_state: "target-circle"))
+
+    expect(rendered_component).to have_selector("div[data-xy='F6']")
   end
 end
