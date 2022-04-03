@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require "test_helper"
+require "rails_helper"
 
-class Boardgrids::BoardgridComponentTest < ViewComponent::TestCase
-  def test_component_renders_something_useful
-    # assert_equal(
-    #   %(<span>Hello, components!</span>),
-    #   render_inline(BoardgridComponent.new(message: "Hello, components!")).css("span").to_html
-    # )
+RSpec.describe Boardgrids::BoardgridComponent, type: :component do
+  it "Renders boardgrid component with correct classes" do
+    render_inline(described_class.new(ships_position: {}, classname: "board-grid-current-user", letters: ("A".."J").to_a, numbers: (1..10).to_a , game_state: {}))
+
+    expect(rendered_component).to have_selector("div[data-xy='F6']")
+    expect(rendered_component).to have_css(".board-grid-current-user")
   end
 end

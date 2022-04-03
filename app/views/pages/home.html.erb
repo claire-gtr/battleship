@@ -4,7 +4,7 @@
 
       <%= render(Players::PlayerNameComponent.new(classname: "btn-blue").with_content("Your Fleet")) %>
 
-      <%= render(Boardgrids::BoardgridComponent.new(classname: "board-grid-current-user", letters: @letters, numbers: @numbers, game_state: @game_state, ships_state: @ships_state)) %>
+      <%= render(Boardgrids::BoardgridComponent.new(ships_position: @ships_position, classname: "board-grid-current-user", letters: @letters, numbers: @numbers, game_state: @game_state)) %>
 
       <div class="shipyard d-flex">
         <h3 class="mr-4 my-0">SHIPYARD</h3>
@@ -26,7 +26,7 @@
     <div class="col px-5">
       <%= render(Players::PlayerNameComponent.new(classname: "btn-grey").with_content("Opponent")) %>
 
-      <%= render(Boardgrids::BoardgridComponent.new(classname: "board-grid-opponent", letters: @letters, numbers: @numbers, game_state: @game_state, ships_state: @ships_state)) %>
+      <%= render(Boardgrids::BoardgridComponent.new(ships_position: @ships_position, classname: "board-grid-opponent", letters: @letters, numbers: @numbers, game_state: @game_state)) %>
       
       <div class="shipyard d-flex">
         <h3 class="m-0">GRAVEYARD</h3>
